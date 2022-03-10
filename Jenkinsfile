@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        registry = "cybernonk404/devops_node2"
+        registry = "cybernonk404/devops_node_test"
         registryCredential = 'MyDocker'
         dockerImage = ''
     }
@@ -11,7 +11,7 @@ pipeline {
         stage('Preparation') {
             steps {
                 echo 'Clone Git Repo'
-                git 'https://github.com/Cybernonk404/nodejs-docs-hello-world'
+                git 'https://github.com/Cybernonk404/devops_nodejs'
             }
         }
         
