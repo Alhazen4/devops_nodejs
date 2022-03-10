@@ -1,7 +1,7 @@
 {
-    "name": "devops-training",
+    "name": "app-service-hello-world",
     "description": "Simple Node JS Web for DevOps training",
-    "version": "0.0",
+    "version": "0.0.1",
     "private": true,
     "license": "GNU",
     "author": "",
