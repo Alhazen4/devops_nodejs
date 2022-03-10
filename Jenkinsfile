@@ -15,13 +15,7 @@ pipeline {
             }
         }
         
-        stage('Test') {
-            steps {
-                echo 'Node JS Test'
-            }
-        }
-        
-        stage('Build and push to registry') {
+        stage('Build, Test and push to Registry') {
             steps {
                 echo 'Docker Build Image'
                 sh 'sudo docker build --tag helloworld:$BUILD_NUMBER .'
