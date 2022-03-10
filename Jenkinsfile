@@ -1,7 +1,7 @@
 pipeline {
     environment {
         registry = "cybernonk404/devops_node_test"
-        registryCredential = 'MyDocker'
+        registryCredential = 'MyGitHub'
         dockerImage = ''
     }
     
