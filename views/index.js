@@ -1,3 +1,4 @@
-function OnClick(){
-    document.getElementsByTagName("h1").innerHTML = "WA SYUKRULILLAH!"
+function clicked()
+{
+    document.getElementById("test").innerHTML = "WA SYUKRULILLAH!";
 }
