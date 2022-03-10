@@ -8,7 +8,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Preparation') {
+        stage('GitHub Clone Repo') {
             steps {
                 echo 'Clone Git Repo'
                 git branch: 'main', credentialsId: 'MyGitHub', url: 'https://github.com/Cybernonk404/devops_nodejs.git'
