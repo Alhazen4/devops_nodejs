@@ -11,7 +11,7 @@ pipeline {
         stage('Preparation') {
             steps {
                 echo 'Clone Git Repo'
-                git 'https://github.com/Cybernonk404/devops_nodejs'
+                git branch: 'main', credentialsId: 'MyGitHub', url: 'https://github.com/Cybernonk404/devops_nodejs.git'
             }
         }
         
