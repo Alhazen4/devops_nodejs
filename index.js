@@ -1,10 +1,22 @@
-const express = require("express")
+const express = require("express");
+const app = express();
+const router = express.Router();
 
-const app = express()
+const path = __dirname + '/views';
 
 app.get("/", (req, res) => {
     res.send("<h2> ALHAMDULILLAH </h2>");
 });
+
+router.use(function (req,res,next) {
+    console.log('/' + req.method);
+    next();
+  });
+  
+  router.get('/', function(req,res){
+    res.sendFile(path + 'index.html');
+  });
+  
 
 const port = process.env.PORT || 1337;
 
