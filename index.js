@@ -11,7 +11,7 @@ const server = http.createServer((request, response) => {
             response.write(data)
         }
     })
-    response.end("ALHAMDULILLAH!");
+    response.end();
 });
 
 const port = process.env.PORT || 1337;
