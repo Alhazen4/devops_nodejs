@@ -6,7 +6,7 @@
     "license": "MIT",
     "author": "Microsoft",
     "scripts": {
-          "test": "mocha node.test.js",
+          "test": "mocha unit.test.js",
           "start": "node index.js"
     },
     "devDependencies": {
