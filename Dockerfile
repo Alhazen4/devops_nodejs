@@ -6,4 +6,4 @@ WORKDIR /var/www
 COPY . /var/www/
 RUN npm install --save-dev mocha
 RUN npm run test
-CMD [ "node", "index.js"]
+CMD [ "node", "index.js" ]

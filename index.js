@@ -1,20 +1,22 @@
-const http = require('http');
-const fs = require('fs')
+const express = require('express');
+const app = express();
+const router = express.Router();
 
-const server = http.createServer((request, response) => {
-    response.writeHead(200, {"Content-Type": "text/html"});
-    fs.readFile('index.html', function(error, data) {
-        if (error) {
-            response.writeHead(404)
-            response.write('Error')
-        } else {
-            response.write(data)
-        }
-    })
-    response.end();
-});
+const path = __dirname + '/views/';
+const port = 1337;
 
-const port = process.env.PORT || 1337;
-server.listen(port);
+router.use(function (req,res,next) {
+    console.log('/' + req.method);
+    next();
+  });
 
-console.log("Server running at http://localhost:%d", port);
+  router.get('/', function(req,res){
+    res.sendFile(path + 'index.html');
+  });
+
+app.use(express.static(path));
+app.use('/', router);
+
+app.listen(port, function () {
+  console.log('Example app listening on port 1337!')
+})
