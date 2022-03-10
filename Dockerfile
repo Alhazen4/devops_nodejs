@@ -1,12 +1,9 @@
-FROM node:10-alpine
+FROM mhart/alpine-node:7
 
-EXPOSE 8080
+EXPOSE 1337
 
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
-WORKDIR /home/node/app
-COPY . /home/node/app/
-USER node
+WORKDIR /var/www
+COPY . /var/www/
 RUN npm install --save-dev mocha
 RUN npm run test
-COPY --chown=node:node . .
 CMD [ "node", "index.js" ]
