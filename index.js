@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const router = express.Router();
 
-const path = __dirname + '/views/';
+const path = __dirname + '/src/';
 
 // app.get("/", (req, res) => {
 //     res.send("<h2> ALHAMDULILLAH </h2>");
