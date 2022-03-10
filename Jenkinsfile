@@ -38,7 +38,7 @@ pipeline {
             steps {
                 echo 'Deploy to Azure as Docker Container'
                 sh '''sudo docker stop helloworld && docker rm helloworld
-                sudo docker run --name helloworld -p 8080:8080 helloworld:$BUILD_NUMBER node /home/node/app/index.js &'''
+                sudo docker run --name helloworld -p 80:8080 helloworld:$BUILD_NUMBER node /home/node/app/index.js &'''
             }
         }
     }
