@@ -4,7 +4,7 @@ EXPOSE 8080
 
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 WORKDIR /home/node/app
-COPY package*.json ./
+COPY . /home/node/app/
 USER node
 RUN npm install --save-dev mocha
 RUN npm run test
