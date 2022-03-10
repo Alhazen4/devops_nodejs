@@ -1,10 +1,10 @@
 {
     "name": "app-service-hello-world",
-    "description": "Simple Hello World Node.js sample for Azure App Service",
+    "description": "Simple Node JS Web for DevOps training",
     "version": "0.0.1",
     "private": true,
-    "license": "MIT",
-    "author": "Microsoft",
+    "license": "GNU",
+    "author": "",
     "scripts": {
           "test": "mocha unit.test.js",
           "start": "node index.js"
