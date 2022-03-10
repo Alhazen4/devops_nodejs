@@ -1,9 +1,10 @@
-FROM mhart/alpine-node:7
+FROM node:10-alpine
 
-EXPOSE 1337
+EXPOSE 8080
 
 WORKDIR /var/www
 COPY . /var/www/
+USER node
 RUN npm install --save-dev mocha
 RUN npm run test
 CMD [ "node", "index.js" ]
